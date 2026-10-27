@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --fundo-pag: #050a15; 
+            --fundo-card: #1f232d; 
+            --fundo-input: #1b1c21; 
+            --fundo-botao: #282a2f; 
+            --texto-primario: #ffffff; 
+            --texto-secundario: #8c8f9b; 
+            --icon-destaque: #2b6cb0; 
+            --link-e-brilho: #4299e1; 
+            --border-glow: rgba(43, 108, 176, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: var(--fundo-pag);
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            padding-bottom: 80px; /* Garante que o menu não cubra o conteúdo */
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espaçamento entre as seções */
+        }
+
+        /* Seção do Texto Separado */
+        .texto {
+            background-color: rgb(128, 31, 31);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .texto h1 {
+            color: var(--texto-primario);
+            font-size: 1.5rem;
+        }
+
+        .texto p {
+            color: var(--texto-secundario);
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Destaques em linha horizontal */
+        .destaques {
+            background-color: rgb(33, 33, 135);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row; /* Horizontal */
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .destaques .caixa {
+            flex: 1;
+            background-color: var(--fundo-card);
+            color: var(--texto-primario);
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        /* Botões alinhados na vertical */
+        .botoes {
+            background-color: rgb(152, 82, 33);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column; /* Vertical */
+            gap: 12px;
+        }
+
+        .botoes .agendar,
+        .botoes .agendamento {
+            background-color: var(--fundo-botao);
+            color: var(--texto-primario);
+            padding: 14px;
+            text-align: center;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .botoes .agendar:hover,
+        .botoes .agendamento:hover {
+            opacity: 0.8;
+        }
+
+        /* Menu inferior fixo */
+        .menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: var(--texto-primario);
+            background-color: var(--fundo-card);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="texto">
+            <h1>Sua melhor experiência começa aqui</h1>
+            <p>Cortes precisos, estilo incomparável. <br> Agende em segundos.</p>
+        </div>
+
+        <div class="destaques">
+            <div class="caixa">01</div>
+            <div class="caixa">02</div>
+            <div class="caixa">03</div>
+        </div>
+
+        <div class="botoes">
+            <div class="agendar">
+                <p>Agendar agora</p>
+            </div>
+            <div class="agendamento">
+                <p>Ver meus agendamentos</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="inicio">01</div>
+        <div class="servicos">02</div>
+        <div class="carrinho">03</div>
+        <div class="atendimento">04</div>
+        <div class="avaliar">05</div>
+    </div>
+</body>
+</html>
